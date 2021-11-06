@@ -1,0 +1,17 @@
+.main{
+    height: 500px;
+    width: 350px;
+    border-radius: 32px;
+    background-color: rgb(61, 185, 243);
+}
+
+.tag{
+    background-color: rgb(8, 97, 75);
+    text-transform: capitalize;
+    border-radius: 20px;
+}
+
+.cardImg {
+    height: 200px;
+    width: 200px;
+}
