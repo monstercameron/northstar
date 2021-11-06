@@ -8,7 +8,7 @@ const Index = () => {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
-          AutoVittoriane
+          test
         </a>
         <button
           className="navbar-toggler"

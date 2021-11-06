@@ -3,15 +3,11 @@ import React from "react";
 
 // import components
 import Nav from "../components/navbar/index";
-import Introduction from "../components/homeIntroduction/index";
-import Feature from "../components/landingFeature/index";
 
 const Home = () => {
   return (
     <>
       <Nav />
-      <Introduction />
-      <Feature />
     </>
   );
 };
