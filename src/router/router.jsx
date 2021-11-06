@@ -4,6 +4,7 @@ import { injectContext } from "../store/store";
 
 // page imports
 import Home from '../pages/Home'
+import Match from '../pages/Match'
 
 function Index() {
 	return (
@@ -12,8 +13,8 @@ function Index() {
 				<Route exact path="/">
 					<Home/>
 				</Route>
-				<Route path="/budget">
-					<div>budget</div>
+				<Route path="/match">
+					<Match />
 				</Route>
 			</Switch>
 		</Router>
