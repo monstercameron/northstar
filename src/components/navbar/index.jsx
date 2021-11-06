@@ -4,6 +4,14 @@ import { Context } from "../../store/store";
 const Index = () => {
   const { store, actions } = useContext(Context);
   console.log(store, actions);
+
+  const [count, setCount] = useState(0);
+
+  const handleClick = () => {
+    setCount(count + 1)
+    console.log(`the count: ${count}`);
+  }
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
@@ -28,35 +36,8 @@ const Index = () => {
                 Home
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/blog">
+            <li className="nav-item" onClick={handleClick}>
                 Blog
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/weight">
-                Weight Reduction
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/costs">
-                Costs
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/performance">
-                Performance
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/parts">
-                Parts
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/concepts">
-                concepts
-              </a>
             </li>
           </ul>
         </div>

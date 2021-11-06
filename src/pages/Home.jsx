@@ -3,11 +3,13 @@ import React from "react";
 
 // import components
 import Nav from "../components/navbar/index";
+import Account from "../components/account/index"
 
 const Home = () => {
   return (
     <>
       <Nav />
+      <Account/>
     </>
   );
 };
