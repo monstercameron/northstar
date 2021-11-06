@@ -2,13 +2,14 @@ import React from "react";
 // import {Database} from "../database/database.jsx";
 
 // import components
-import { Header, Footer } from "../components/navbar/index";
+import Nav from "../components/navbar/index";
+import Account from "../components/account/index"
 
 const Home = () => {
   return (
     <>
-      <Header />
-      <Footer />
+      <Nav />
+      <Account/>
     </>
   );
 };

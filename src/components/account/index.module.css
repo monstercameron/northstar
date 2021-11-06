@@ -1,0 +1,49 @@
+/* Buttons*/
+.btnMicrosoft {
+    background-color: rgb(231,76,137);
+}
+
+.btnApple {
+    background-color: rgb(249,131, 0);
+}
+
+.btnLinkedIn {
+    background-color: rgb(96,199,223);
+}
+
+.btnEmail{
+    background-color: black;
+}
+
+.btnMicrosoft, .btnApple, .btnLinkedIn, .btnEmail {
+    justify-content:center;
+    color:white;
+}
+
+/*Creating a strike before the or text*/
+
+.strike {
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .strike:before,
+  .strike:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 30%;
+  }
+  
+  .strike:before {
+    right: 12%;
+    margin-left: -20%;
+  }
+  
+  .strike:after {
+    left: 12%;
+    margin-right: -20%;
+  }
