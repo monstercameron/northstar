@@ -7,7 +7,6 @@ export const Header = (props) => {
   let history = useHistory();
 
   const { store, actions } = useContext(Context);
-  console.log(store, actions);
 
   const goBack = () => {
     history.goBack();
@@ -30,7 +29,6 @@ export const Footer = (props) => {
   let history = useHistory();
 
   const { store, actions } = useContext(Context);
-  console.log(store, actions);
 
   const goHome = () => {
     history.push("/");

@@ -1,7 +1,8 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useContext, useEffect } from 'react'
 import TinderCard from 'react-tinder-card'
 import SwipeCard from './card/index'
 import Controls from './controls/index'
+import { Context } from '../../store/store'
 
 //dummy data
 import bird1 from '../../media/images/bird1.png'
@@ -9,6 +10,7 @@ import bird2 from '../../media/images/bird2.png'
 import bird3 from '../../media/images/bird3.png'
 
 export default function Index() {
+    const { store, actions } = useContext(Context)
 
     const cardList = [
         <SwipeCard tags={['coding', 'ping pong', 'ping pong', 'ping pong']} icon={bird1} />,
@@ -24,6 +26,13 @@ export default function Index() {
     const canSwipeForwards = (card < cardList.length - 1)
 
     const currentCard = cardList[card]
+
+
+    useEffect(() => {
+        if (card === 2) {
+            actions.setMatched(true)
+        }
+    }, [card])
 
     const moveCard = (direction) => {
         switch (direction) {
@@ -81,7 +90,7 @@ export default function Index() {
         )
     }
 
-    console.log('card: ', card);
+    // console.log('card: ', card);
 
     return (
         <div className='container-sm'>

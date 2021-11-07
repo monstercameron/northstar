@@ -2,6 +2,7 @@ import React from 'react'
 import { main, topNav, content, footer } from './Match.module.css'
 import Swipe from '../components/Swipe/index'
 import {Header, Footer} from '../components/navbar/index'
+import Matched from './../components/Matched/index'
 
 export default function Match() {
     return (
@@ -10,6 +11,7 @@ export default function Match() {
                 <Header />
             </div>
             <div className={content}>
+                <Matched />
                 <Swipe />
             </div>
             <div className={footer}>

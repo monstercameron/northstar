@@ -51,6 +51,7 @@ export const injectContext = (PassedComponent) => {
 const getState = ({ getStore, getActions, setStore }) => {
     return {
         store: {
+            matched: false,
             OnbSettings:
                 [Intro,
                     Basic,
@@ -59,7 +60,7 @@ const getState = ({ getStore, getActions, setStore }) => {
                     Questions,
                     Avatar,
                 ],
-            OnbIndex: 5,
+            OnbIndex: 0,
             OnbQuestion: [
                 {
                     question: 'what is your gender?',
@@ -95,6 +96,10 @@ const getState = ({ getStore, getActions, setStore }) => {
                 if (index < length - 1) {
                     setStore({ OnbIndex: index + 1 });
                 }
+            },
+            setMatched: (bool) => {
+                console.log('set matched:', bool);
+                setStore({ matched: bool });
             },
         }
     };
