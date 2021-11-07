@@ -28,7 +28,7 @@ export default function Basic() {
                 <div className="row">
                     <div className="col-10 mx-auto">
 
-                        <div className="row mt-5">
+                        <div className="row mt-3">
                             <div className="col text-center mx-auto">
                                 <h6>Here’s what we’ve found</h6>
                             </div>
@@ -119,7 +119,7 @@ export default function Basic() {
                                     </span>
                                 </div>
                                 <div className={`col justify-content-center text-capitalize`}>
-                                    New York, NY
+                                    Art Director
                                 </div> <div className={`inline-flex`}>
                                     <span className="material-icons">
                                         radio_button_unchecked
@@ -131,7 +131,13 @@ export default function Basic() {
                         <div className="row align-items-center">
                             <div className="col-auto mx-auto mt-3 pt-3">
                                 <button className={`shadow ${button}`} onClick={next}>
-                                    <h3 className='text-center text-capitalize'>next</h3></button>
+                                    <h3 className='text-center text-capitalize'>Yes!</h3></button>
+                            </div>
+                        </div>
+
+                        <div className="row align-items-center">
+                            <div className="col-auto mx-auto mt-3 pt-3">
+                                <span>I see mistakes! <b><u> Let me edit</u></b></span>
                             </div>
                         </div>
 
