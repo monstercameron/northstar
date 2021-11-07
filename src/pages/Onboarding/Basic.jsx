@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Header, Footer } from '../../components/navbar/index'
 import { topNav, content, footer } from '../Match.module.css'
-import { input, main } from '../Onboarding.module.css'
+import { input, button, main } from '../Onboarding.module.css'
 import { useHistory } from "react-router-dom";
 import { Context } from '../../store/store'
 
@@ -30,20 +30,21 @@ export default function Basic() {
 
                         <div className="row mt-5">
                             <div className="col text-center mx-auto">
-                                Here’s what we’ve found
+                                <h6>Here’s what we’ve found</h6>
                             </div>
                         </div>
 
                         <div className="row">
                             <div className="col text-center mx-auto">
-                                Is the information we have correct?
+                                <h6>
+                                    Is the information we have correct?</h6>
                             </div>
                         </div>
 
-                        <div className="row mt-5 mb-5">
+                        <div className="row mt-5 mb-4">
                             <button type="button" className={`${input} p-2 shadow btn btn-default btn-m d-flex justify-content-start align-items-center`}>
                                 <div className={`inline-flex`}>
-                                    <span class="material-icons">
+                                    <span className="material-icons">
                                         person
                                     </span>
                                 </div>
@@ -51,17 +52,17 @@ export default function Basic() {
                                     Tasha Bhatnagar
                                 </div>
                                 <div className={`inline-flex`}>
-                                    <span class="material-icons">
+                                    <span className="material-icons">
                                         radio_button_checked
                                     </span>
                                 </div>
                             </button>
                         </div>
 
-                        <div className="row mb-5">
+                        <div className="row mb-4">
                             <button type="button" className={`${input} p-2  shadow btn btn-default btn-m d-flex justify-content-start align-items-center`}>
                                 <div className={`inline-flex`}>
-                                    <span class="material-icons">
+                                    <span className="material-icons">
                                         cake
                                     </span>
                                 </div>
@@ -69,62 +70,69 @@ export default function Basic() {
                                     October 29th 1997
                                 </div>
                                 <div className={`inline-flex`}>
-                                    <span class="material-icons">
+                                    <span className="material-icons">
                                         radio_button_checked
                                     </span>
                                 </div>
                             </button>
                         </div>
 
-                        <div className="row mb-5">
+                        <div className="row mb-4">
                             <button type="button" className={`${input} p-2  shadow btn btn-default btn-m d-flex justify-content-start align-items-center`}>
                                 <div className={`inline-flex`}>
-                                    <span class="material-icons">
+                                    <span className="material-icons">
                                         public
                                     </span>
                                 </div>
                                 <div className={`col justify-content-center text-capitalize`}>
                                     Indian Citizen
                                 </div> <div className={`inline-flex`}>
-                                    <span class="material-icons">
+                                    <span className="material-icons">
                                         radio_button_unchecked
                                     </span>
                                 </div>
                             </button>
                         </div>
 
-                        <div className="row mb-5">
+                        <div className="row mb-4">
                             <button type="button" className={`${input} p-2  shadow btn btn-default btn-m d-flex justify-content-start align-items-center`}>
                                 <div className={`inline-flex`}>
-                                    <span class="material-icons">
+                                    <span className="material-icons">
                                         location_on
                                     </span>
                                 </div>
                                 <div className={`col justify-content-center text-capitalize`}>
                                     New York, NY
                                 </div> <div className={`inline-flex`}>
-                                    <span class="material-icons">
+                                    <span className="material-icons">
                                         radio_button_unchecked
                                     </span>
                                 </div>
                             </button>
                         </div>
 
-                        <div className="row mb-5">
+                        <div className="row mb-4">
                             <button type="button" className={`${input} p-2  shadow btn btn-default btn-m d-flex justify-content-start align-items-center`}>
                                 <div className={`inline-flex`}>
-                                    <span class="material-icons">
+                                    <span className="material-icons">
                                         list_alt
                                     </span>
                                 </div>
                                 <div className={`col justify-content-center text-capitalize`}>
                                     New York, NY
                                 </div> <div className={`inline-flex`}>
-                                    <span class="material-icons">
+                                    <span className="material-icons">
                                         radio_button_unchecked
                                     </span>
                                 </div>
                             </button>
+                        </div>
+
+                        <div className="row align-items-center">
+                            <div className="col-auto mx-auto mt-3 pt-3">
+                                <button className={`shadow ${button}`} onClick={next}>
+                                    <h3 className='text-center text-capitalize'>next</h3></button>
+                            </div>
                         </div>
 
                     </div>

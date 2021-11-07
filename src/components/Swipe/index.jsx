@@ -11,7 +11,7 @@ import bird3 from '../../media/images/bird3.png'
 export default function Index() {
 
     const cardList = [
-        <SwipeCard tags={['coding', 'ping pong', 'ping pong', 'ping pong', 'ping pong', 'ping pong', 'ping pong']} icon={bird1} />,
+        <SwipeCard tags={['coding', 'ping pong', 'ping pong', 'ping pong']} icon={bird1} />,
         <SwipeCard tags={['dancing', 'archery']} icon={bird2} />,
         <SwipeCard tags={['basketball', 'cars']} icon={bird3} />
     ]

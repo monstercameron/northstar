@@ -1,64 +1,74 @@
 import React, { useContext } from 'react'
 import { Header, Footer } from '../../components/navbar/index'
 import { topNav, content, footer } from '../Match.module.css'
-import { button, main } from '../Onboarding.module.css'
+import { inputStyle1, button, main } from '../Onboarding.module.css'
 import { useHistory } from "react-router-dom";
 import { Context } from '../../store/store'
 
-export default function Language() {
+export default function Basic() {
 
-    const { store, actions:{next} } = useContext(Context)
+    const { store, actions: { next } } = useContext(Context)
 
     let history = useHistory();
     const goBack = () => {
-      history.goBack();
+        history.goBack();
     };
 
+
     return (<div className={`container-fluid m-0 p-0 ${main}`}>
-    <div className={topNav}>
-        <div className='p-3' onClick={goBack}>
-            <span className="material-icons" style={{ fontSize: '2em' }}>
-                arrow_back
-            </span>
-        </div>
-    </div>
-    <div className={content}>
-        <div className='container'>
-            <div className="row">
-                <div className="col ">
-                    {/* <i/mg className='img-fluid' src="https://via.placeholder.com/400x300.png?text=Visit+WhoIsHostingThis.com+Buyers+Guide" alt="" /> */}
-                </div>
-            </div>
-            <div className="row">
-                <div className="col mt-5"><h3 className='text-center
-                text-uppercase'>Language <p />
-                    Check Your Inbox.</h3></div>
-            </div>
-            <div className="row">
-                <div className="col-10 mx-auto mt-2">
-                    <h6 className='text-center'>
-                        Please verify your identity
-                        so we can import your
-                        company information.
-                    </h6>
-                </div>
-            </div>
-            <div className="row align-items-center">
-                <div className="col-4 mx-auto mt-3 pt-5">
-                    <button className={`shadow ${button}`} onClick={next}>
-                        <h3 className='text-center text-capitalize'>next</h3></button>
-                </div>
-            </div>
-            <div className="row align-items-center">
-                <div className="col-8 mx-auto pt-5">
-                    Didn’t get it? <b><u>Resend Email</u></b>
-                </div>
+        <div className={topNav}>
+            <div className='p-2' onClick={goBack}>
+                <span className="material-icons" style={{ fontSize: '2em' }}>
+                    arrow_back
+                </span>
             </div>
         </div>
+        <div className={content}>
+            <div className='container'>
+                <div className="row">
+                    <div className="col-10 mx-auto">
+
+                        <div className="row mt-5">
+                            <div className="col text-left mx-auto">
+                                <h6>What Language(S)
+                                </h6>
+                            </div>
+                        </div>
+
+                        <div className="row">
+                            <div className="col text-left mx-auto">
+                                <h6>
+                                    Do You Normally Speak?</h6>
+                            </div>
+                        </div>
+
+                        <div className="row mb-4 mt-3">
+                            <input
+                                className={`${inputStyle1} p-2 
+                             shadow form-control d-flex justify-content-start align-items-center`}
+                                placeholder='Primary Language ' />
+                        </div>
+
+                        <div className="row mb-4">
+                            <input
+                                className={`${inputStyle1} p-2 
+                             shadow form-control d-flex justify-content-start align-items-center`}
+                                placeholder='Secondary Language' />                        </div>
+
+                        <div className="row align-items-center">
+                            <div className="col-auto mx-auto mt-3 pt-3">
+                                <button className={`shadow ${button}`} onClick={next}>
+                                    <h3 className='text-center text-capitalize'>next</h3></button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className={footer}>
+            {/* <Footer /> */}
+        </div>
     </div>
-    <div className={footer}>
-        {/* <Footer /> */}
-    </div>
-</div>
     )
 }

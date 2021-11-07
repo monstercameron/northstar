@@ -32,8 +32,10 @@ export default function Onboarding() {
                 return <Questions />
             case 4:
                 return <Avatar />
+            case 5:
+                return <Message />
             default:
-                return <Intro />
+                return 'oops'
         }
     }
 

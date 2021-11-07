@@ -1,14 +1,52 @@
-.button{
-   border-radius: 8px;
-   padding: .3em 2em .1em 2em;
-   background-color: #3DA8FF;
-   border: none;
+.button {
+  border-radius: 8px;
+  padding: 0.3em 2em 0.1em 2em;
+  background-color: #3da8ff;
+  border: none;
 }
-.main{
-   background-color: #BCE7FA; 
-   height: 100vh;
+.main {
+  background-color: #bce7fa;
+  height: 100vh;
 }
 
 .input {
-background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+}
+
+.inputStyle1 {
+  background: none;
+  border-radius: none;
+  border-bottom: 2px solid #000000;
+  text-transform: capitalize;
+  color: #000000;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.inputStyle1::placeholder {
+  color: #000000;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.avatar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 100px);
+  gap: 1.5em;
+}
+
+.avatar > div {
+  border-radius: 10px;
+  background-color: white;
+}
+
+.message{
+  border-radius: 20px;
+  background-color: white;
+}
+
+
+.message h5{
+   font-weight: 900;
 }

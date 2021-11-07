@@ -28,7 +28,7 @@ export const Header = (props) => {
 
 export const Footer = (props) => {
   let history = useHistory();
-  
+
   const { store, actions } = useContext(Context);
   console.log(store, actions);
 
@@ -46,12 +46,17 @@ export const Footer = (props) => {
         </div>
         <div className="col">
           <span className="material-icons">
-            group
+            menu_book
           </span>
         </div>
         <div className="col">
           <span className="material-icons">
             emoji_events
+          </span>
+        </div>
+        <div className="col">
+          <span className="material-icons">
+            account_circle
           </span>
         </div>
       </div>

@@ -59,7 +59,7 @@ const getState = ({ getStore, getActions, setStore }) => {
                     Questions,
                     Avatar,
                 ],
-            OnbIndex: 1,
+            OnbIndex: 5,
             OnbQuestion: [
                 {
                     question: 'what is your gender?',

@@ -7,9 +7,11 @@ import { Context } from '../../store/store'
 
 export default function Index() {
 
-    const { store, actions:{next} } = useContext(Context)
+    const { store, actions } = useContext(Context)
 
     let history = useHistory();
+    const next = () => history.push('/onboarding')
+
     const goBack = () => {
       history.goBack();
     };
