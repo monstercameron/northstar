@@ -95,4 +95,4 @@ export default function Index() {
     )
 }
 
-// https://via.placeholder.com/400x300?text=North+star
+// https://via.className=holder.com/400x300?text=North+star
