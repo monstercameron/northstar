@@ -1,0 +1,53 @@
+/*Receiver text*/
+
+.receiverbubble {
+    /*position: relative;*/
+    width:fit-content;
+    height: auto;
+    
+    padding: 10px;
+    border-radius: 25px;
+    border: solid #aaa6a6;
+    background: #aaa6a6;
+    color: white;
+  }
+  
+/*  .receiverbubble:before {
+    content:"";
+    position: absolute;
+    right: 100%;
+    top: 26px;
+    width: 0;
+    height: 0;
+    
+    border-top: 13px solid transparent;
+    border-right: 26px solid lightblue;
+    border-bottom: 13px solid transparent;
+  }*/
+  
+  .receiverbubble textarea {
+    position: inherit;
+    width: inherit;
+    height: inherit;
+    background: inherit;
+    
+    margin: 0;
+    padding: 0;
+    
+    border: none;
+    resize: none;
+  }
+
+  /*Sender*/
+
+.senderbubble {
+    /*position: relative;*/
+    width:fit-content;
+    height: auto;
+    
+    padding: 10px;
+    border-radius: 25px;
+    border: solid #2ebeff;
+    background: #2ebeff;
+    color: white;
+  }
