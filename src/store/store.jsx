@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
+import Intro from '../pages/Onboarding/Intro'
+import Language from '../pages/Onboarding/Language'
+import Message from '../pages/Onboarding/Message'
+import Basic from '../pages/Onboarding/Basic'
+import Avatar from '../pages/Onboarding/Avatar'
+import Questions from '../pages/Onboarding/Questions'
+
 export const Context = React.createContext(null);
 
 export const injectContext = (PassedComponent) => {
@@ -43,8 +50,59 @@ export const injectContext = (PassedComponent) => {
 
 const getState = ({ getStore, getActions, setStore }) => {
     return {
-        store: {},
-        actions: {}
+        store: {
+            matched: false,
+            OnbSettings:
+                [Intro,
+                    Basic,
+                    Language,
+                    Message,
+                    Questions,
+                    Avatar,
+                ],
+            OnbIndex: 0,
+            OnbQuestion: [
+                {
+                    question: 'what is your gender?',
+                    opts: [
+                        'He,His',
+                        'She,Her',
+                        'They,Them',
+                        'Genderfluid'
+                    ]
+                },
+            ],
+            OnbQuestionIndex: 0,
+            OnbValues: {
+                name: '',
+                dob: '',
+                residence: '',
+                cityState: '',
+                jobTitle: '',
+                priLang: '',
+                secLang: '',
+                gender: '',
+                food: '',
+                coffee: '',
+                candy: '',
+                personality: '',
+                avatar: '',
+            },
+        },
+        actions: {
+            next: () => {
+                console.log('from store', getStore().OnbIndex);
+                const index = getStore().OnbIndex
+                const length = getStore().OnbSettings.length
+                if (index < length - 1) {
+                    setStore({ OnbIndex: index + 1 });
+                }
+            },
+            setMatched: (bool) => {
+                console.log('set matched:', bool);
+                setStore({ matched: bool });
+            },
+        }
     };
 };
 
